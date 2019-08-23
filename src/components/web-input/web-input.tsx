@@ -24,14 +24,22 @@ export class WebInput {
 	   '177.10.10.13'
 	];
   
-  @Prop() tag: string;
-  @State() isDropDown : boolean = false;
+  @Prop() text: string;
+  @State() isDropDown: boolean = false;
+
+  @Event() clickedItem: EventEmitter;
+
+  handleClick = (item) => {
+    this.isDropDown = !this.isDropDown;
+    this.clickedItem.emit(item);
+    this.text = item;
+  };
 
   render() {
     return <div class="div-main" >
       <div><label>IP-адрес</label></div>
       <div class="div-input">
-        <input type="text"/>
+        <input type="text" value={this.text} />
         <img src="assets/images/arrow.png" onClick={() => this.arrowClick()}/>
       </div>
         {this.isDropDown &&

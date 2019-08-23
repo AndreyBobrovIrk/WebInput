@@ -10,7 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface WebInput {
-    'tag': string;
+    'text': string;
   }
 }
 
@@ -29,7 +29,8 @@ declare global {
 
 declare namespace LocalJSX {
   interface WebInput extends JSXBase.HTMLAttributes<HTMLWebInputElement> {
-    'tag'?: string;
+    'onClickedItem'?: (event: CustomEvent<any>) => void;
+    'text'?: string;
   }
 
   interface IntrinsicElements {
