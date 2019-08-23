@@ -7,14 +7,6 @@
     display:inline-block;
 }
 
-.div-list {
-    border: 1px solid LightGray;
-    z-index: 999999;    
-    position: relative; 
-    top: 5px; 
-    left: 0px; 
-}
-
 .dropdown-list {
     border: 1px solid LightGray;
     animation: fadeIn 1s;
@@ -27,6 +19,8 @@
     box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
     cursor: pointer;
     margin-top: 10px;
+    max-height: 125px;
+    overflow-y:scroll;
 }
 
 .dropdown-item {
