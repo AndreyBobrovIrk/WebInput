@@ -1,0 +1,11 @@
+
+.div-input {
+    border: 1px solid LightGray;
+    display:inline-block;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+}
